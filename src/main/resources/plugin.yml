@@ -1,0 +1,16 @@
+name: Minej
+version: '${project.version}'
+main: xyz.theclashfruit.minej.minej
+api-version: 1.17
+prefix: &6Minej
+load: STARTUP
+authors: [ TheClashFruit ]
+description: A Minecraft server plugin for making plugins in JavaScript, simalar to Skript.
+website: https://theclashfruit.ga/projects/minej
+
+commands:
+  minej:
+    description: Info about Minej.
+    usage: /<command>
+    permission: minej.admin
+    permission-message: You don't have <permission>.
