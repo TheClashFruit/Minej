@@ -1,6 +1,6 @@
 name: Minej
 version: '${project.version}'
-main: xyz.theclashfruit.minej.minej
+main: xyz.theclashfruit.minej.Minej
 api-version: 1.17
 prefix: &6Minej
 load: STARTUP

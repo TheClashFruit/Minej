@@ -6,7 +6,7 @@
 
     <groupId>xyz.theclashfruit.minej</groupId>
     <artifactId>Miney</artifactId>
-    <version>b1.0</version>
+    <version>1.0-BETA</version>
     <packaging>jar</packaging>
 
     <name>Minej</name>
@@ -63,6 +63,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>mvnrepository</id>
+            <url>https://mvnrepository.com/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -71,6 +75,16 @@
             <artifactId>spigot-api</artifactId>
             <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.nashorn</groupId>
+            <artifactId>nashorn-core</artifactId>
+            <version>15.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javadelight</groupId>
+            <artifactId>delight-nashorn-sandbox</artifactId>
+            <version>0.2.1</version>
         </dependency>
     </dependencies>
 </project>
