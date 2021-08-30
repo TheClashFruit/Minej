@@ -18,7 +18,7 @@ MinejJavaInterface.sendConsole('hello from js');
 
 Registering a command:
 ```js
-JavaPluginInterface.registerCommand('commandName', 'commandDescription', 'command.permission', (commandSender, s, strings) => {
+MinejJavaInterface.registerCommand('commandName', 'commandDescription', 'command.permission', (commandSender, s, strings) => {
   commandSender.sendMessage("you ran a command!");
 });
 ```
