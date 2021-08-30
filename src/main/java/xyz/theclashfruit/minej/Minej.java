@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+import java.io.File;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.*;
@@ -24,6 +25,11 @@ public final class Minej extends JavaPlugin {
 
         serverConfig.addDefault("sandBoxMaxMemory", 512);
         serverConfig.options().copyDefaults(true);
+
+        File scriptsDir = new File(getDataFolder().getAbsolutePath() + "/scripts");
+        if (!scriptsDir.exists()){
+            scriptsDir.mkdirs();
+        }
 
         saveConfig();
     }
@@ -40,12 +46,12 @@ public final class Minej extends JavaPlugin {
 
             NashornSandbox sandBox = NashornSandboxes.create();
             sandBox.allow(MinejJavaInterface.class);
+            sandBox.allow(JavaPlugin.class);
 
             //sandBox.setMaxMemory(serverConfig.getInt("sandBoxMaxMemory"));
 
             try {
-                sandBox.eval("print('hello form js');");
-                getLogger().info((String) sandBox.eval("return MinejJavaInterface;"));
+                sandBox.eval("var JavaPluginInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface'); print(JavaPluginInterface.returnMe('hello from js'));");
             } catch (ScriptException e) {
                 e.printStackTrace();
             }

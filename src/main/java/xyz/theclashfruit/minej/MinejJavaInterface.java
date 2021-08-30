@@ -3,11 +3,9 @@ package xyz.theclashfruit.minej;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MinejJavaInterface extends JavaPlugin {
-    public void main(String[] args) {
+    public static String returnMe(String msg) {
+        System.out.println(msg);
 
-    }
-
-    public void sendConsoleMessage(String msg) {
-        getLogger().info(msg);
+        return msg;
     }
 }
