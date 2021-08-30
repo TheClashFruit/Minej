@@ -14,7 +14,7 @@ public class MinejJavaInterface extends JavaPlugin {
         return msg;
     }
 
-    public void registerCommand(String name, String permission, String description) throws NoSuchFieldException, IllegalAccessException {
+    public static void registerCommand(String name, String permission, String description) throws NoSuchFieldException, IllegalAccessException {
         MinecraftCommand myCommand = new MinecraftCommand(name, permission, description, new ArrayList<String>());
 
         final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
