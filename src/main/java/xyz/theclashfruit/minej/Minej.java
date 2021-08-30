@@ -7,13 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import java.io.File;
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.*;
 
 public final class Minej extends JavaPlugin {
 
@@ -42,8 +37,6 @@ public final class Minej extends JavaPlugin {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("minej")) {
-            sender.sendMessage("Minej Go Brrr!");
-
             NashornSandbox sandBox = NashornSandboxes.create();
             sandBox.allow(MinejJavaInterface.class);
             sandBox.allow(JavaPlugin.class);
@@ -51,7 +44,7 @@ public final class Minej extends JavaPlugin {
             //sandBox.setMaxMemory(serverConfig.getInt("sandBoxMaxMemory"));
 
             try {
-                sandBox.eval("var JavaPluginInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface'); JavaPluginInterface.sendConsole('hello from js');");
+                sandBox.eval("var JavaPluginInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface'); JavaPluginInterface.registerCommand('jscmd', 'js.cmd', 'Registered a new command with JavaScript.');");
             } catch (ScriptException e) {
                 e.printStackTrace();
             }
