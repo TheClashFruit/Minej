@@ -5,8 +5,12 @@ Accessing communication class(es):
 // MinejJavaInterface
 let MinejJavaInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface');
 
-// JavaPlugin
-let JavaPlugin = Java.type('org.bukkit.plugin.java.JavaPlugin');
+// Bukkit Classes
+let Bukkit = {
+  JavaPlugin: Java.type('org.bukkit.plugin.java.JavaPlugin'),
+  Command: Java.type('org.bukkit.command.Command'),
+  CommandSender: Java.type('org.bukkit.command.CommandSender')
+}
 
 // More will be added soon.
 ```

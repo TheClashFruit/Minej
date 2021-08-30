@@ -40,6 +40,8 @@ public final class Minej extends JavaPlugin {
             NashornSandbox sandBox = NashornSandboxes.create();
             sandBox.allow(MinejJavaInterface.class);
             sandBox.allow(JavaPlugin.class);
+            sandBox.allow(Command.class);
+            sandBox.allow(CommandSender.class);
 
             //sandBox.setMaxMemory(serverConfig.getInt("sandBoxMaxMemory"));
 
