@@ -51,7 +51,7 @@ public final class Minej extends JavaPlugin {
             //sandBox.setMaxMemory(serverConfig.getInt("sandBoxMaxMemory"));
 
             try {
-                sandBox.eval("var JavaPluginInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface'); print(JavaPluginInterface.returnMe('hello from js'));");
+                sandBox.eval("var JavaPluginInterface = Java.type('xyz.theclashfruit.minej.MinejJavaInterface'); JavaPluginInterface.sendConsole('hello from js');");
             } catch (ScriptException e) {
                 e.printStackTrace();
             }
