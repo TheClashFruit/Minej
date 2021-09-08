@@ -27,7 +27,7 @@ const myCommand = {
   description: 'commandDescription',
   permission: 'command.permission',
   aliases: [ 'commandAlias' ],
-  exexcute: (commandSender, s, strings) => {
+  execute: (commandSender, s, strings) => {
     commandSender.sendMessage("this is a pogger command!");
   }
 }
