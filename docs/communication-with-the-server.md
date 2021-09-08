@@ -22,7 +22,15 @@ MinejJavaInterface.sendConsole('hello from js');
 
 Registering a command:
 ```js
-MinejJavaInterface.registerCommand('commandName', 'commandDescription', 'command.permission', [ 'commandAlias' ], (commandSender, s, strings) => {
-  commandSender.sendMessage("you ran a command!");
-});
+const myCommand = {
+  name: 'commandName', 
+  description: 'commandDescription',
+  permission: 'command.permission',
+  aliases: [ 'commandAlias' ],
+  exexcute: (commandSender, s, strings) => {
+    commandSender.sendMessage("this is a pogger command!");
+  }
+}
+
+MinejJavaInterface.registerCommand(myCommand);
 ```
