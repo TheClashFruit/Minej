@@ -1,5 +1,7 @@
 # Minej
 
+> Not maintined anymore, nor it got finished.
+
 ![GitHub](https://img.shields.io/github/license/TheClashFruit/Minej)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/TheClashFruit/Minej)
 
